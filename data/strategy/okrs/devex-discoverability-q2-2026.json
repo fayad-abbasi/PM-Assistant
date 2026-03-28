@@ -1,0 +1,45 @@
+{
+  "id": "okr-2026-Q2-003",
+  "objective": "Engineers find and reuse what already exists instead of reinventing or asking around",
+  "period": "2026-Q2",
+  "linked_insights": [
+    "insight-2026-03-27-002",
+    "insight-2026-03-27-004"
+  ],
+  "linked_prds": [],
+  "strategic_priority": "Reduce cognitive load and onboarding friction by making platform capabilities, components, and documentation discoverable and trustworthy",
+  "key_results": [
+    {
+      "id": "kr-007",
+      "description": "Frontend engineers find canonical components quickly instead of doing archaeology across three repos, measured by self-reported component discovery time dropping from 30 minutes to under 5 minutes per feature",
+      "target": 5,
+      "current": 30,
+      "unit": "minutes (component discovery time per feature, self-reported)",
+      "indicator_type": "leading",
+      "influence_zone": "influence",
+      "status": "on-track"
+    },
+    {
+      "id": "kr-008",
+      "description": "New engineers ramp up using self-service resources instead of depending on a single senior engineer, measured by new-hire time to first merged PR dropping from 8 days to under 3 days",
+      "target": 3,
+      "current": 8,
+      "unit": "days (new-hire time to first merged PR)",
+      "indicator_type": "leading",
+      "influence_zone": "influence",
+      "status": "on-track"
+    },
+    {
+      "id": "kr-009",
+      "description": "Engineers trust internal documentation enough to use it as their first resource, measured by developer portal satisfaction score in quarterly survey improving from baseline to 3.5+/5.0",
+      "target": 3.5,
+      "current": null,
+      "unit": "score (developer portal satisfaction, 1-5 scale)",
+      "indicator_type": "leading",
+      "influence_zone": "influence",
+      "status": "on-track"
+    }
+  ],
+  "status": "active",
+  "created_at": "2026-03-27T12:00:00Z"
+}

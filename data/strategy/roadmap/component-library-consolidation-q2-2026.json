@@ -1,0 +1,13 @@
+{
+  "id": "roadmap-2026-Q2-004",
+  "title": "Component Library Consolidation — One Canonical Library with Search and Migration Path",
+  "description": "Consolidate from three overlapping frontend component libraries to one canonical library with a clear migration path and deprecation enforcement. Deliverables: designate the canonical library, build a component search interface (type a need, find the canonical solution with props, examples, and design token mapping), create migration tooling and a timeline for sunsetting the legacy libraries, and implement CI-tested Storybook so documentation cannot go stale. Eliminates 30-minute-per-feature archaeology and code review debates about library choice.",
+  "quarter": "2026-Q2",
+  "status": "planned",
+  "priority": "medium",
+  "linked_prds": [],
+  "okr_ids": [
+    "okr-2026-Q2-003"
+  ],
+  "created_at": "2026-03-27T12:00:00Z"
+}

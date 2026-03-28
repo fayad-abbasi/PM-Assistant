@@ -1,0 +1,45 @@
+{
+  "id": "okr-2026-Q2-002",
+  "objective": "Product teams launch new services without waiting on anyone else",
+  "period": "2026-Q2",
+  "linked_insights": [
+    "insight-2026-03-27-003",
+    "insight-2026-03-27-004"
+  ],
+  "linked_prds": [],
+  "strategic_priority": "Break the toil trap by building a guardrailed golden path for service creation, freeing SRE capacity and unblocking product team velocity",
+  "key_results": [
+    {
+      "id": "kr-004",
+      "description": "Product teams onboard new services to production in hours instead of weeks, measured by median time from service request to first production deployment dropping from 2-3 weeks to under 2 days",
+      "target": 2,
+      "current": 15,
+      "unit": "days (median service onboarding time)",
+      "indicator_type": "leading",
+      "influence_zone": "influence",
+      "status": "on-track"
+    },
+    {
+      "id": "kr-005",
+      "description": "SREs spend their time on reliability engineering instead of manual configuration toil, measured by percentage of SRE time spent on manual service onboarding dropping from approximately 60% to under 20%",
+      "target": 20,
+      "current": 60,
+      "unit": "percent (SRE time on manual onboarding toil)",
+      "indicator_type": "leading",
+      "influence_zone": "influence",
+      "status": "on-track"
+    },
+    {
+      "id": "kr-006",
+      "description": "New services ship with consistent observability out of the box, measured by percentage of wizard-created services that meet the observability baseline (error rate alerts, dashboards, log aggregation) at launch reaching 100%",
+      "target": 100,
+      "current": null,
+      "unit": "percent (services meeting observability baseline at launch)",
+      "indicator_type": "leading",
+      "influence_zone": "control",
+      "status": "on-track"
+    }
+  ],
+  "status": "active",
+  "created_at": "2026-03-27T12:00:00Z"
+}

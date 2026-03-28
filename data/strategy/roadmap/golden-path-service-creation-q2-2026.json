@@ -1,0 +1,13 @@
+{
+  "id": "roadmap-2026-Q2-002",
+  "title": "Golden Path Service Creation — Self-Service Wizard with Guardrails",
+  "description": "Build a CLI-based service creation wizard that covers the full 14-step onboarding checklist with sensible defaults and opt-out (not opt-in) standards for monitoring, alerts, dashboards, CI pipeline, and deployment configuration. Includes guardrails that enforce required configurations (e.g., error rate alerts) by default, preventing the failure mode that killed the previous self-service attempt. Partnering with Sarah Kim's platform engineering team. Pilot with 3 teams, then expand org-wide.",
+  "quarter": "2026-Q2",
+  "status": "planned",
+  "priority": "high",
+  "linked_prds": [],
+  "okr_ids": [
+    "okr-2026-Q2-002"
+  ],
+  "created_at": "2026-03-27T12:00:00Z"
+}

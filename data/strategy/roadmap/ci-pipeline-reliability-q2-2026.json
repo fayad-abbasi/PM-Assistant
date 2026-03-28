@@ -1,0 +1,15 @@
+{
+  "id": "roadmap-2026-Q2-001",
+  "title": "CI Pipeline Reliability — Flaky Test Quarantine, Build Cache Fix, and Pipeline Optimization",
+  "description": "Deliver the CI pipeline reliability MVP: automated flaky test detection and quarantine, Bazel remote cache audit and fix, CI failure classification UI, and module-level selective test execution. This is the highest-priority initiative based on discovery research (Opportunity Score 16/18) and Q4 developer satisfaction survey results confirming CI as the #1 pain point. Targets: median build time under 15 minutes, re-run rate below 10%, cache hit rate above 80%.",
+  "quarter": "2026-Q2",
+  "status": "planned",
+  "priority": "critical",
+  "linked_prds": [
+    "prd-2026-03-27-001"
+  ],
+  "okr_ids": [
+    "okr-2026-Q2-001"
+  ],
+  "created_at": "2026-03-27T12:00:00Z"
+}

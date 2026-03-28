@@ -1,0 +1,32 @@
+{
+  "id": "eval-insight-2026-03-27-003",
+  "artifact_id": "insight-2026-03-27-003",
+  "artifact_type": "insight",
+  "rubric": "rubric-interview",
+  "scores": {
+    "theme_extraction": {
+      "score": 4,
+      "feedback": "Five themes identified, each specific and descriptive (e.g., 'toil trap cycle', 'self-service pendulum' rather than generic labels). Themes are ranked by prominence. Each theme is supported by transcript evidence — quotes, specific examples, and behavioral observations. Deducted from 5 because this is a single-interview insight so cross-interviewee prevalence cannot be assessed, and counter-evidence is not explicitly noted for each theme."
+    },
+    "pain_point_depth": {
+      "score": 4,
+      "feedback": "Four pain points documented with description, severity, frequency, current workaround, and supporting verbatim quote for each. Severity and frequency are explicitly rated. The emotional dimension surfaces in the toil pain point (professional identity tension). Deducted from 5 because frequency indicators are qualitative (constant, occasional) rather than quantitative (single interviewee limitation), and persona segmentation is limited to the SRE perspective without cross-referencing other affected personas."
+    },
+    "jtbd_framing": {
+      "score": 4,
+      "feedback": "Jobs are comprehensively mapped across all three dimensions: three functional jobs, two emotional jobs, and two social jobs. Each uses proper situation-motivation-outcome structure. Jobs are connected to transcript evidence. Feature requests are mapped back to specific jobs. Deducted from 5 because importance/satisfaction gaps are not explicitly scored, and no formal prioritization framework (e.g., opportunity score) is applied to rank jobs."
+    },
+    "confidence_calibration": {
+      "score": 4,
+      "feedback": "Confidence rated high with explicit justification citing: multiple specific examples (14-step checklist, 6-hour outage, three-quarter deferral, checkout vs. recommendations contrast), behavioral evidence (daily work patterns, incident response), and strong emotional signals. Limitations are clearly acknowledged — single interview, SRE perspective only. Specific next steps to increase confidence are stated (cross-validation with product teams and engineering managers). Deducted from 5 because the analysis does not quantify source diversity or explicitly state what contradictory evidence might look like."
+    },
+    "actionability": {
+      "score": 4,
+      "feedback": "The opportunity statement provides a clear bridge from observation to action with specific outcomes (reduce onboarding from weeks to hours, free SRE capacity, establish observability standards). Feature requests are categorized as explicit and implicit with job mappings. The golden path concept is well-articulated as a product direction. Deducted from 5 because the insight does not include explicit hypothesis structures (if we X, then Y, because Z), specific next-step artifacts to create (e.g., 'create PRD for golden-path service wizard'), or success metrics for validation."
+    }
+  },
+  "max_score": 5,
+  "overall_score": 4.0,
+  "feedback": "1. Add explicit next steps section: Include 2-3 prioritized recommendations with hypothesis structures (e.g., 'If we build a CLI-based service creation tool with required-config validation, then onboarding time drops below 1 day, because 70% of steps are automatable template operations'). Reference specific artifact types to create next (PRD, additional interviews with product teams). This would elevate actionability from 4 to 5.\n2. Add cross-validation plan: Specify which personas to interview next (product team leads who experience the bottleneck, engineering managers who approve roadmap trade-offs) and what quantitative data to gather (service creation frequency, SRE time allocation breakdown). This would strengthen confidence calibration.\n3. Include importance-satisfaction gap analysis for JTBD: Rate each job on importance (from transcript signals) and current satisfaction (from pain point evidence) to create an opportunity scoring matrix. This would sharpen prioritization and elevate JTBD framing.",
+  "created_at": "2026-03-27T10:10:00Z"
+}

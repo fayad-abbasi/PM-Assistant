@@ -1,0 +1,60 @@
+{
+  "reviewed": [
+    {
+      "folder": "Customer and Market Insight",
+      "reviewed_at": "2026-03-14T00:00:00Z",
+      "files": ["summary.md", "content.md"],
+      "outcome": "applied",
+      "notes": "Pre-existing reference material. Frameworks integrated into /discover and /ux prompts."
+    },
+    {
+      "folder": "Data Driven Discovery",
+      "reviewed_at": "2026-03-14T00:00:00Z",
+      "files": ["summary.md", "content.md"],
+      "outcome": "applied",
+      "notes": "Pre-existing reference material. Data Detective framework integrated into /discover and /eval workflows."
+    },
+    {
+      "folder": "How to launch a product customers want",
+      "reviewed_at": "2026-03-14T00:00:00Z",
+      "files": ["summary.md", "content.md"],
+      "outcome": "applied",
+      "notes": "Pre-existing reference material. Launch playbook integrated into /prd and /gtm workflows."
+    },
+    {
+      "folder": "Hypothesis and Experimentation",
+      "reviewed_at": "2026-03-14T00:00:00Z",
+      "files": ["summary.md", "content.md"],
+      "outcome": "applied",
+      "notes": "Pre-existing reference material. Hypothesis frameworks integrated into /prd and /uat workflows."
+    },
+    {
+      "folder": "Josh Ledgard Presentation JPMC",
+      "reviewed_at": "2026-03-14T00:00:00Z",
+      "files": ["summary.md", "content.md"],
+      "outcome": "applied",
+      "notes": "Pre-existing reference material. AI agent patterns integrated into /strategy workflow."
+    },
+    {
+      "folder": "Pragmatic OKRs",
+      "reviewed_at": "2026-03-14T00:00:00Z",
+      "files": ["summary.md", "content.md"],
+      "outcome": "applied",
+      "notes": "Pre-existing reference material. OKR methodology integrated into /strategy, /outcomes, and /retro workflows."
+    },
+    {
+      "folder": "Product Adoption JPMC Course",
+      "reviewed_at": "2026-03-14T00:00:00Z",
+      "files": ["summary.md", "content.md"],
+      "outcome": "applied",
+      "notes": "Pre-existing reference material. HEART framework and adoption curve integrated into /gtm and /eval workflows."
+    },
+    {
+      "folder": "Product Discovery at Netflix",
+      "reviewed_at": "2026-03-14T00:00:00Z",
+      "files": ["summary.md", "content.md"],
+      "outcome": "applied",
+      "notes": "Pre-existing reference material. Netflix discovery workflow and interview techniques integrated into /discover and /ux workflows."
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "id": "eval-gtm-2026-03-27-001",
+  "artifact_id": "gtm-2026-03-27-001",
+  "artifact_type": "gtm",
+  "rubric": "rubric-gtm",
+  "scores": {
+    "audience_fit": {
+      "score": 5,
+      "feedback": "Tone is consistently engineer-to-engineer throughout. Opens with the technical pain (45-minute builds, flaky tests, broken cache) using specific numbers from discovery. Includes two pseudo-code/CLI output blocks showing quarantine labels and selective test execution summaries — the most persuasive format for developers. Zero marketing language; phrases like 'You know who you are' and 'That's the state of things' match how engineers talk. The FAQ answers real developer questions (quarantine safety, dependency graph mechanics, frontend applicability) rather than promotional fluff."
+    },
+    "prd_fidelity": {
+      "score": 5,
+      "feedback": "Every claim traces to the PRD or linked insights. The 45-minute build time, 50% flaky failure rate, 11 hours/sprint, and #build-cache-woes channel all come from insight-2026-03-27-001. Targets (15-minute median, 10% re-run rate, 80% cache hit rate) match the PRD success metrics exactly. The 4 functional requirements (FR-1 through FR-4) are accurately described. No features are invented — FR-5 through FR-9 are correctly noted as post-MVP where mentioned. The canary rollout plan (3 repos, 2 weeks) and rollback mechanism match the PRD's adoption strategy."
+    },
+    "adoption_awareness": {
+      "score": 4,
+      "feedback": "Addresses Innovators (API extensibility, configurable thresholds) and Early Adopters (proof-it-works metrics, pilot-before-expansion commitment) explicitly. Time to first value is excellent — 'your literal next git push.' Getting Started section is a clear 5-step path. The FAQ addresses the regression anxiety risk from the PRD. Minor gap: does not explicitly discuss the risk of engineers reverting to old retry behavior (cultural inertia) in the adoption section, though this is partially covered by 'Retire your auto-retry scripts' in the Integration Guide."
+    },
+    "clarity_and_persuasion": {
+      "score": 5,
+      "feedback": "The narrative arc is tight: problem (quantified pain), solution (one paragraph), mechanism (detailed how-it-works), integration (what changes for you), getting started (do nothing), adoption (proof points), FAQ (objection handling). The opening paragraph is visceral — it describes the exact workflow developers live through every day. The code blocks are the most persuasive elements; they show, rather than tell, what the new CI experience looks like. The call to action is embedded naturally: you don't need to do anything, just push your next PR."
+    },
+    "completeness": {
+      "score": 5,
+      "feedback": "All 7 required sections are present and substantive: Problem (quantified with 5 data points), Solution (mechanism-focused paragraph), How It Works (4 subsections covering all 4 FRs with code examples), Integration Guide (systems, workflow changes, breaking changes, migration), Getting Started (5-step path to first value), Adoption Curve Considerations (Innovators and Early Adopters), FAQ (6 technical questions with PRD-grounded answers). No section reads as boilerplate."
+    }
+  },
+  "max_score": 5,
+  "overall_score": 4.8,
+  "feedback": "1. Add explicit mention of cultural inertia risk in the Adoption Curve section — the PRD identifies 'engineers distrust the new system and continue re-running manually' as a medium-likelihood risk, and addressing it directly in the developer messaging would strengthen adoption awareness.\n2. Consider adding a brief architecture diagram (text-based) in the How It Works section showing the data flow from code push through flaky detection, classification, and quarantine — this would appeal to developers who think in system diagrams.\n3. The FAQ could include a question about how flaky test ownership notifications work (FR-6, post-MVP) since developers will naturally ask 'who fixes the flaky tests once quarantined?' — even if the answer is 'post-MVP, here is the plan.'",
+  "created_at": "2026-03-27T14:05:00Z"
+}

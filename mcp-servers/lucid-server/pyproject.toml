@@ -1,0 +1,14 @@
+[project]
+name = "pm-assistant-lucid-server"
+version = "0.1.0"
+description = "Lucidchart MCP server for PM Assistant — flowcharts, org charts, architecture diagrams"
+requires-python = ">=3.11"
+dependencies = [
+    "mcp[cli]",
+    "httpx",
+    "python-dotenv",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

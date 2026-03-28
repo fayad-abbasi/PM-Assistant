@@ -1,0 +1,14 @@
+[project]
+name = "jira-server"
+version = "0.1.0"
+description = "Jira Cloud MCP server for PM Assistant — creates Epics, Stories, and Tasks from PRDs"
+requires-python = ">=3.11"
+dependencies = [
+    "mcp[cli]",
+    "httpx",
+    "python-dotenv",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

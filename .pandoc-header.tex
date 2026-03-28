@@ -1,0 +1,11 @@
+% Allow line breaks in monospace/code text within tables
+\usepackage{etoolbox}
+\apptocmd{\ttfamily}{\hyphenchar\font=`\-}{}{}
+
+% Reduce font size in tables to help with fitting
+\AtBeginEnvironment{longtable}{\footnotesize}
+
+% More permissive line breaking to prevent overflow
+\sloppy
+\tolerance=1000
+\emergencystretch=3em

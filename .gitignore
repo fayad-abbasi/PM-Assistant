@@ -1,0 +1,38 @@
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+dist/
+build/
+.venv/
+venv/
+*.egg
+
+# MCP server virtualenvs
+mcp-servers/*/.venv/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Assets (large binary files — track separately if needed)
+data/ux/assets/*.png
+data/ux/assets/*.jpg
+data/ux/assets/*.pdf
+data/ux/assets/*.sketch
+data/ux/assets/*.fig
+
+# Background information (local-only — personal PM reference material)
+background_information/

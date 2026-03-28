@@ -1,0 +1,13 @@
+{
+  "id": "tc-2026-03-27-002",
+  "title": "Quarantine Enforcement — Happy Path: Flaky Test Failure Does Not Block PR Merge",
+  "prd_id": "prd-2026-03-27-001",
+  "acceptance_criterion": "REQ-001-AC-02",
+  "given": "A test named 'test_db_connection_retry' is flagged as 'flaky' in the test registry with a 15% flake rate",
+  "when": "That test fails during a CI run for PR #4521 submitted by engineer Raj Mehta",
+  "then": "The CI run is marked as 'passed with quarantined flaky failures' (not 'failed'), PR #4521 is not blocked from merging, and the flaky test failure is logged in the quarantine report with test name, PR number, timestamp, and failure output",
+  "status": "pending",
+  "result_notes": null,
+  "executed_at": null,
+  "created_at": "2026-03-27T15:00:00Z"
+}

@@ -1,0 +1,13 @@
+{
+  "id": "tc-2026-03-27-001",
+  "title": "Flaky Test Detection — Happy Path: Test Exceeding 10% Flake Rate Is Flagged",
+  "prd_id": "prd-2026-03-27-001",
+  "acceptance_criterion": "REQ-001-AC-01",
+  "given": "A test named 'test_payment_timeout' has failed non-deterministically in 12 of its last 100 runs (12% flake rate), exceeding the 10% threshold",
+  "when": "The flaky detection system runs its scheduled analysis at 02:00 UTC",
+  "then": "The test 'test_payment_timeout' is flagged as 'flaky' in the test registry with a calculated flake rate of 12%, last flake date of 2026-03-26, and an affected PR count of 8",
+  "status": "pending",
+  "result_notes": null,
+  "executed_at": null,
+  "created_at": "2026-03-27T15:00:00Z"
+}

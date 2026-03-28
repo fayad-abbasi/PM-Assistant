@@ -1,0 +1,32 @@
+{
+  "id": "eval-insight-2026-03-27-002",
+  "artifact_id": "insight-2026-03-27-002",
+  "artifact_type": "insight",
+  "rubric": "rubric-interview",
+  "scores": {
+    "theme_extraction": {
+      "score": 4,
+      "feedback": "Five themes are specific and descriptive ('component library fragmentation', 'documentation decay', 'onboarding bottleneck — single point of failure', 'discoverability deficit', 'tribal knowledge dependency'). Each is supported by transcript evidence including direct quotes. Themes are ranked by prominence. Cannot reach 5 because this is a single-interview insight so cross-interviewee prevalence cannot be assessed, and no counter-evidence or outliers are noted."
+    },
+    "pain_point_depth": {
+      "score": 5,
+      "feedback": "All five pain points are documented with description, severity, frequency, current workaround, and verbatim supporting quote. Frequency is specific where possible ('four times per year', 'every new feature', 'constant'). Severity assessments are justified by behavioral evidence (30 min/feature, 1 week/onboarding cycle). Emotional dimension is woven into the sentiment section and JTBD framing. Pain points are implicitly prioritized by severity ordering (high before medium)."
+    },
+    "jtbd_framing": {
+      "score": 4,
+      "feedback": "Three functional jobs, two emotional jobs, and two social jobs are explicitly framed with situation-motivation-outcome structure. All three JTBD dimensions are addressed. Jobs are connected to specific interview evidence through the Fragment Card and Thread-Pulling sections. Missing explicit importance/satisfaction gap analysis and opportunity scoring to reach a 5, though the opportunity statement partially fills this role."
+    },
+    "confidence_calibration": {
+      "score": 5,
+      "feedback": "Confidence is rated 'high' with precise justification: multiple specific examples enumerated (four onboarding cycles, 30 minutes per feature, three repos, four Slack answers, 200-page Confluence space, eight-month-old docs). Behavioral evidence (repeated patterns, not one-off complaints) is cited. Limitation is explicitly acknowledged: single interview from one team. A concrete next step to increase confidence is provided: 'interview 2-3 frontend engineers from other teams to check if fragmentation and documentation decay are org-wide or Growth-team-specific.' This demonstrates intellectual honesty and calibration awareness."
+    },
+    "actionability": {
+      "score": 4,
+      "feedback": "The insight provides three explicit feature requests and four implicit ones, each mapped to the JTBD it addresses. The opportunity statement synthesizes a clear path from problem to value. The confidence section identifies a specific validation next step (cross-team interviews). Missing explicit hypothesis structure ('if we X, then Y, because Z') and measurable success criteria for each recommendation to reach a 5. Recommendations could also more clearly distinguish between 'act now' vs. 'validate first' items."
+    }
+  },
+  "max_score": 5,
+  "overall_score": 4.4,
+  "feedback": "1. Add explicit hypothesis structures to feature requests: For each explicit and implicit request, frame as 'If we [action], then [expected outcome], because [evidence]' with measurable success criteria. This would make the insight directly translatable into experiment designs or PRD acceptance criteria.\n2. Add a 'Validation Plan' section that distinguishes between what can be acted on now vs. what needs further validation. The confidence section mentions cross-team interviews but this could be expanded into a structured next-steps plan with specific actions, owners, and timelines.\n3. Consider adding counter-evidence or risk factors: Note any areas where Lisa's perspective might not generalize (e.g., Growth Team may have unique frontend patterns) to further strengthen the confidence calibration.",
+  "created_at": "2026-03-27T10:05:00Z"
+}

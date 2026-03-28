@@ -1,0 +1,13 @@
+{
+  "id": "roadmap-2026-Q2-003",
+  "title": "Developer Portal and Documentation Overhaul — One Source of Truth That Stays Correct",
+  "description": "Restructure the developer portal from a 200-page unnavigable Confluence space into a curated, searchable knowledge base with automated freshness enforcement. Phase 1 (Q2): audit and archive stale content, establish a navigation structure with search, implement CI-tested documentation for the component library (Storybook validated in CI so stories cannot go stale). Phase 2 (Q3): extend to service onboarding guides and platform capability docs. Directly addresses the documentation trust deficit identified across all three discovery interviews.",
+  "quarter": "2026-Q2",
+  "status": "planned",
+  "priority": "high",
+  "linked_prds": [],
+  "okr_ids": [
+    "okr-2026-Q2-003"
+  ],
+  "created_at": "2026-03-27T12:00:00Z"
+}

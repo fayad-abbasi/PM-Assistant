@@ -1,0 +1,31 @@
+{
+  "artifact_id": "insight-2026-03-27-001",
+  "artifact_type": "insight",
+  "rubric": "rubric-interview",
+  "scores": {
+    "theme_extraction": {
+      "score": 4,
+      "feedback": "Six themes identified, each specific and descriptive (e.g., 'Flaky test normalization' rather than generic 'testing issues'). Themes are ranked by prominence. Every theme is supported by direct quotes and behavioral evidence (e.g., the #build-cache-woes channel as evidence for broken cache infra, auto-retry scripts as evidence for normalization). Themes are mutually distinct. Deducted from 5 because this is a single-interview insight so cross-interviewee prevalence cannot be established, and no counter-evidence or outliers are noted."
+    },
+    "pain_point_depth": {
+      "score": 4,
+      "feedback": "Five pain points documented, each with description, severity, frequency, current workaround, and verbatim supporting quote. Severity and frequency use consistent scales. Emotional dimension is captured (frustration, exasperation). Pain points are implicitly prioritized by severity. Deducted from 5 because frequency is based on a single interviewee's report rather than multi-source counts, and the connection between behavioral observations and emotional insights could be more explicit per pain point."
+    },
+    "jtbd_framing": {
+      "score": 4,
+      "feedback": "Jobs are comprehensively mapped across functional (4 jobs), emotional (3 jobs), and social (2 jobs) dimensions. All use proper situation-motivation-outcome structure. Jobs are clearly derived from transcript evidence. Deducted from 5 because there is no explicit importance/satisfaction gap analysis or opportunity scoring to prioritize which jobs represent the biggest unmet need, and jobs are not directly linked to specific interviewee statements with quote references."
+    },
+    "confidence_calibration": {
+      "score": 4,
+      "feedback": "Confidence rated 'high' with thorough justification: cites multiple specific quantified examples (11 hours/sprint, 45-min builds, day-8 first PR), behavioral corroboration (auto-retry scripts, abandoned cache, #build-cache-woes channel), and internal consistency. Critically, the limitation is explicitly stated — single interview from one team — and the analysis identifies what would increase confidence further (cross-team validation). This is honest calibration. Deducted from 5 because it does not specify what contradictory evidence might look like or define precise thresholds for confidence level changes."
+    },
+    "actionability": {
+      "score": 4,
+      "feedback": "Three prioritized next steps provided, each with action, hypothesis (if/then structure), success metric, and specific artifact type to create next. Recommendations are categorized (validate breadth, quantify with data, draft PRD) and sequenced logically (parallel validation before PRD). The path from insight to product decision is clear. Deducted from 5 because the recommendations do not specify who should execute each step or provide time estimates, and the opportunity statement — while strong — does not include a falsifiable hypothesis about the solution approach."
+    }
+  },
+  "max_score": 5,
+  "overall_score": 4.0,
+  "feedback": "1. Add cross-reference links to specific transcript lines or timestamps for each JTBD and theme, making the evidence chain fully auditable from insight back to raw interview data.\n2. Include an explicit importance/satisfaction gap matrix for the identified jobs — rating how important each job is versus how well current tools satisfy it — to enable prioritization of which jobs to address first.\n3. Specify owners or responsible roles for each recommended next step and include rough time estimates to make the action plan executable without further interpretation.",
+  "created_at": "2026-03-27T10:00:00Z"
+}

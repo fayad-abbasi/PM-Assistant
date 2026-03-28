@@ -1,0 +1,31 @@
+{
+  "artifact_id": "prd-2026-03-27-001",
+  "artifact_type": "prd",
+  "rubric": "rubric-prd",
+  "scores": {
+    "completeness": {
+      "score": 5,
+      "feedback": "All 13 required sections are present with substantial content. Personas include goals, pain points, adoption curve segments, and funnel stages. Risks are presented in a likelihood/impact matrix with mitigation strategies. Functional requirements use MoSCoW prioritization with explicit insight traceability. MVP scope uses the Goldilocks Principle with clear rationale for what is included vs. deferred. Out of Scope items are specific with justification for deferral. No stubs or placeholders."
+    },
+    "insight_grounding": {
+      "score": 5,
+      "feedback": "Every functional requirement traces to specific insight IDs (insight-2026-03-27-001, insight-2026-03-27-004) with inline references. The Problem Statement enriches the input with direct evidence: Raj's 11 hours/sprint, 100 eng-hours/day org-wide estimate, 50% flaky failure rate, #build-cache-woes Slack channel, and direct quotes ('We've normalized a broken feedback loop'). User stories include parenthetical citations linking to specific themes and insight IDs. The hypothesis BECAUSE clause references specific data points and opportunity scores from the batch insight. Quantified waste figures from discovery research are threaded through the entire document."
+    },
+    "acceptance_criteria_quality": {
+      "score": 5,
+      "feedback": "All 10 acceptance criteria use strict Given/When/Then format. Each criterion includes specific measurable thresholds: 10% flake rate over 100 runs (AC-1), 50 consecutive passes for de-quarantine (AC-3), 80% cache hit rate with 500ms response time (AC-6), 70% hit rate threshold triggering 5-minute alert SLA (AC-7), 15-minute median over a rolling 7-day window (AC-9), 1-hour data staleness limit (AC-10). Criteria are atomic — each tests one specific behavior. AC-2 covers the quarantine enforcement path, AC-5 covers the PR status integration. Edge cases are addressed (quarantine reversal in AC-3, infrastructure failure as a separate category in AC-4)."
+    },
+    "adoption_readiness": {
+      "score": 5,
+      "feedback": "All five HEART dimensions are addressed in a table with explicit goals, signals, and metrics for each. Hero metric (median CI build time) and secondary hero metric (re-run rate) are defined with specific targets and timeframes. The Adoption Strategy section covers target segment (Early Adopters with rationale), time to first value (automatic — no engineer action required on first push), continuous onboarding (weekly CI Health Digest, brown-bag session), messaging differentiated by persona (Early Adopter, Early Majority, Engineering Manager), and crossing the chasm with specific mitigation (canary rollout, rollback plan, transparent metrics). The observation that infrastructure adoption is repository-level rather than individual-level is a valuable insight that correctly frames the adoption challenge as regression anxiety rather than behavior change."
+    },
+    "clarity_and_precision": {
+      "score": 4,
+      "feedback": "Language is consistently precise with measurable thresholds throughout the document: 15-minute median build time, 80% cache hit rate, 10% flake rate threshold, 500ms cache response time, 50 consecutive passes for de-quarantine, 90-day and 180-day data retention, 99.9% uptime for quarantine system. Requirements are testable as written. Minor areas for improvement: (1) 'typical code change' in AC-9 is defined as 'fewer than 50 files' but the boundary between typical and atypical could be more explicitly documented with distribution data from current CI; (2) FR-4 mentions 'file-change heuristics' as a fallback for dependency graph analysis without specifying what the heuristics would be; (3) the 4-week and 8-week adoption timelines in Success Metrics could reference a specific launch date or milestone to be fully unambiguous."
+    }
+  },
+  "max_score": 5,
+  "overall_score": 4.8,
+  "feedback": "1. Strengthen the definition of 'typical code change' in AC-9 and FR-4: Include a distribution analysis of current change sizes (e.g., p50/p75/p95 files changed per PR) from CI data to ground the 50-file threshold empirically rather than asserting it. This makes the success criterion more defensible when reporting results.\n2. Specify the selective test execution heuristic fallback in FR-4: If full dependency graph analysis is not available at MVP, define the module-level selection rule precisely (e.g., 'run all tests in any Bazel package that contains a modified BUILD file or source file'). This removes ambiguity for the implementing team.\n3. Add a concrete launch date or milestone reference to the adoption timeline: The Success Metrics reference '4 weeks of full rollout' and '8 weeks of launch' — anchoring these to a specific target date (even tentative) would make the metrics actionable for tracking.",
+  "created_at": "2026-03-27T11:00:00Z"
+}

@@ -1,0 +1,74 @@
+{
+  "categories": {
+    "domain": [
+      "ci-cd",
+      "local-dev-environment",
+      "build-systems",
+      "testing-infrastructure",
+      "sdk",
+      "internal-tooling",
+      "documentation",
+      "developer-onboarding",
+      "observability",
+      "service-templates",
+      "self-service",
+      "api",
+      "security",
+      "data-pipeline",
+      "integrations",
+      "automation",
+      "notifications",
+      "compliance"
+    ],
+    "persona": [
+      "backend-engineer",
+      "frontend-engineer",
+      "fullstack-engineer",
+      "sre",
+      "tech-lead",
+      "engineering-manager",
+      "vp-engineering",
+      "pm",
+      "designer",
+      "data-engineer",
+      "devops-engineer",
+      "new-hire"
+    ],
+    "priority": [
+      "critical",
+      "high",
+      "medium",
+      "low"
+    ],
+    "theme": [
+      "pain-point",
+      "feature-request",
+      "developer-friction",
+      "toil-reduction",
+      "cognitive-load",
+      "inner-loop-speed",
+      "outer-loop-speed",
+      "adoption",
+      "developer-satisfaction",
+      "workflow",
+      "performance",
+      "scalability",
+      "reliability",
+      "self-service",
+      "discoverability",
+      "migration",
+      "backward-compatibility",
+      "cost-reduction",
+      "time-saving",
+      "collaboration"
+    ],
+    "stage": [
+      "discovery",
+      "validation",
+      "build",
+      "launch",
+      "adoption",
+      "maturity"
+    ]
+  }
+}

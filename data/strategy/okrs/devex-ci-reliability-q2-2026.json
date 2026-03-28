@@ -1,0 +1,47 @@
+{
+  "id": "okr-2026-Q2-001",
+  "objective": "Engineers trust their CI pipeline and get fast, reliable feedback on every code push",
+  "period": "2026-Q2",
+  "linked_insights": [
+    "insight-2026-03-27-001",
+    "insight-2026-03-27-004"
+  ],
+  "linked_prds": [
+    "prd-2026-03-27-001"
+  ],
+  "strategic_priority": "Eliminate the #1 developer pain point (CI friction) to recover engineering productivity and restore trust in the build-test-merge feedback loop",
+  "key_results": [
+    {
+      "id": "kr-001",
+      "description": "Backend and frontend engineers experience CI builds that complete fast enough to maintain flow state, measured by median CI build time dropping from 45 minutes to under 15 minutes",
+      "target": 15,
+      "current": 45,
+      "unit": "minutes (median CI build time)",
+      "indicator_type": "leading",
+      "influence_zone": "influence",
+      "status": "on-track"
+    },
+    {
+      "id": "kr-002",
+      "description": "Engineers stop re-running CI as a workaround for flaky tests, measured by CI re-run rate dropping from approximately 50% to below 10%",
+      "target": 10,
+      "current": 50,
+      "unit": "percent (CI re-run rate)",
+      "indicator_type": "leading",
+      "influence_zone": "influence",
+      "status": "on-track"
+    },
+    {
+      "id": "kr-003",
+      "description": "Engineers rely on the remote build cache instead of abandoning it, measured by Bazel remote cache hit rate increasing from approximately 30% to at least 80% for unchanged targets",
+      "target": 80,
+      "current": 30,
+      "unit": "percent (cache hit rate for unchanged targets)",
+      "indicator_type": "leading",
+      "influence_zone": "influence",
+      "status": "on-track"
+    }
+  ],
+  "status": "active",
+  "created_at": "2026-03-27T12:00:00Z"
+}

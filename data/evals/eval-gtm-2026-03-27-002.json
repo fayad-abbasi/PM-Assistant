@@ -1,0 +1,32 @@
+{
+  "id": "eval-gtm-2026-03-27-002",
+  "artifact_id": "gtm-2026-03-27-002",
+  "artifact_type": "gtm",
+  "rubric": "rubric-gtm",
+  "scores": {
+    "audience_fit": {
+      "score": 5,
+      "feedback": "Tone is consistently EM-appropriate: team-focused, metric-driven, practical. The Team Impact Analysis table is the centerpiece — it gives EMs exactly what they need (before/after per dimension with measurement sources). Honest about estimates vs. measured data ('Note on estimates' paragraph). Migration costs are addressed proactively: 'Minimal. This is not a tool migration.' The Decision Required section is explicit about what the EM does and does not need to do. No marketing language; reads as a peer briefing from a PM to an EM."
+    },
+    "prd_fidelity": {
+      "score": 5,
+      "feedback": "All 'Before' numbers cite specific insight references (insight-2026-03-27-001). All 'After' targets match PRD success metrics (15-min median, 10% re-run rate, 85% first-pass success, 80% cache hit, 4.0+/5.0 satisfaction). The onboarding improvement estimate is flagged as an estimate and scoped correctly — notes that local env is a separate initiative. Migration approach (repo-by-repo, 3 highest-traffic first, 8-week expansion) matches the PRD. Rollback mechanism (one-command revert) is accurately described. No overclaiming."
+    },
+    "adoption_awareness": {
+      "score": 4,
+      "feedback": "Week-by-week adoption timeline is well-structured with specific EM actions per phase. Temporary productivity impact is addressed honestly ('1-2 days to learn new labels'). The migration plan covers incremental rollout, rollback, and support channels. Minor gap: does not explicitly name the adoption curve segment being targeted (Early Majority via infrastructure rollout) or discuss the risk of teams with different tech stacks having divergent outcomes — though this is partially mitigated by 'Actual team-level results will vary' in the estimates note."
+    },
+    "clarity_and_persuasion": {
+      "score": 5,
+      "feedback": "Strong executive summary — three sentences covering what, impact, and timeline. The Team Impact Analysis table is scannable and immediately actionable. Adoption timeline is concrete with EM-specific actions. Decision Required section is the best part: it leads with 'No opt-in decision is needed' and then lists 5 specific things the EM should do, each with estimated effort. The document respects the EM's time — it can be skimmed in 3 minutes with the tables doing the heavy lifting."
+    },
+    "completeness": {
+      "score": 5,
+      "feedback": "All 6 required sections are present and substantive: Executive Summary (3 sentences, team impact lead), Team Impact Analysis (5-dimension table with before/after/measurement, plus estimates note), Adoption Timeline (3 phases with EM actions, plus temporary impact subsection), Migration Plan (workflow changes, breaking changes, rollback, support, approach), Success Metrics (5-metric table with source, target, and timeline), Decision Required (explicit 'no opt-in' plus 5 action items). No stub sections, no placeholders."
+    }
+  },
+  "max_score": 5,
+  "overall_score": 4.8,
+  "feedback": "1. Explicitly name the adoption curve segment (Early Majority via infrastructure rollout, not individual opt-in) in the Adoption Timeline section — this helps EMs understand why their team does not need to 'adopt' anything and differentiates this from typical tool rollouts that require individual behavior change.\n2. Add a brief note in the Team Impact Analysis about how metrics will differ for frontend vs. backend teams — the 11 hours/sprint figure is from a backend engineer, and frontend EMs may see different baseline numbers. Setting this expectation prevents disappointment.\n3. Consider adding a 'What This Does NOT Fix' subsection referencing the PRD's out-of-scope items (local dev environment, CD pipeline, test suite refactoring) — EMs will appreciate knowing the boundaries so they can set accurate team expectations.",
+  "created_at": "2026-03-27T14:05:00Z"
+}

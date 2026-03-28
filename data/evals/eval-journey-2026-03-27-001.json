@@ -1,0 +1,31 @@
+{
+  "artifact_id": "journey-2026-03-27-001",
+  "artifact_type": "journey",
+  "rubric": "rubric-journey",
+  "scores": {
+    "completeness": {
+      "score": 5,
+      "feedback": "All five adoption stages (Awareness, Interest, Evaluation, Trial, Adoption) are thoroughly covered with specific, differentiated content in every column. No empty or generic cells. Moments of truth section identifies 5 critical moments, each with evidence, current/desired outcomes, and risk levels. Every pain point in the journey table and Section 5 has a corresponding improvement recommendation in Section 6 with impact and complexity assessment. Emotional arc is mapped across all stages with explanations for sentiment shifts. The interview evidence index connects each stage to specific source data with direct quotes. Persona context includes JTBD, adoption curve classification with justification, Problem Statement template fully completed, and current state summary."
+    },
+    "evidence_grounding": {
+      "score": 5,
+      "feedback": "Every stage is grounded in specific, cited evidence from interview-2026-03-05-001. Direct quotes are included for each stage: '45 minutes for a one-line fix' (Interest), 'I can't just delete it' (Evaluation), '11 hours just waiting for CI' and 'normalized a broken feedback loop' (Trial), 'hazing ritual' and 'fire truck' (Adoption). Behavioral observations are referenced (auto-retry scripts, #build-cache-woes channel, team retry culture). Insight-2026-03-27-001 is referenced by ID throughout, with specific themes cited. The interview evidence index in Section 7 provides a complete audit trail. All moments of truth include verbatim quotes with interview ID attribution."
+    },
+    "emotional_mapping": {
+      "score": 5,
+      "feedback": "Emotional mapping draws from multiple empathy map quadrants: Think & Feel (e.g., resignation, dread, impatience at Awareness/Interest), Hear (teammates venting in Slack), See (other engineers retrying), Say vs. Do contradictions (says system is broken but continues retrying at Interest; advocates for change but participates in retry culture at Adoption). Pain quadrant is deeply covered through friction points. The emotional arc narrative explains transitions between stages and identifies the Trial stage retry loop as the emotional low point. Five moments of truth are identified with specific quotes, risk assessments, and current vs. desired outcomes. The Say vs. Do gap is explicitly surfaced at Interest and Adoption stages, revealing that Raj's vocal criticism coexists with behavioral compliance — a non-obvious insight about cultural inertia."
+    },
+    "actionability": {
+      "score": 5,
+      "feedback": "Every pain point and friction point has a specific, actionable recommendation with impact and complexity ratings. Recommendations are clearly adoption-stage-aware: pre-push CI health indicator for Awareness, selective test execution for Interest, failure classification for Evaluation, quarantine system and partial re-runs for Trial, golden path onboarding script for Adoption. Recommendations are prioritized by impact and include concrete targets (15-minute median build time, 80% cache hit rate, <10% re-run rate, time-to-first-PR under 3 days). The ownership recommendation addresses the systemic root cause. Recommendations map directly to PRD functional requirements (FR-1 through FR-4), creating a traceable chain from journey pain points to product backlog. The improvement table could be directly translated into user stories."
+    },
+    "persona_fit": {
+      "score": 5,
+      "feedback": "The persona is vivid and evidence-based. Raj is characterized with specificity: Senior Backend Engineer on Payments, mid-to-senior IC, ships multiple changes per week to a critical business domain, mentors new hires. The JTBD is specific and grounded in interview data ('get reliable CI feedback in under 15 minutes'). The adoption curve classification (Early Adopter) is justified with multiple evidence points: self-diagnosed the problem, quantified the cost, articulated the solution, tried workarounds, and frames with urgency ('fire truck'). The Problem Statement template captures his situation, barriers, root causes, and emotional impact with precision. Every stage of the journey reflects Raj's unique context — his technical sophistication (understanding of Bazel cache, test dependency issues), his organizational role (mentoring new hires, team culture carrier), and his emotional disposition (frustrated but constructive, data-driven advocacy). It is impossible to read this journey without knowing exactly who it was written for."
+    }
+  },
+  "max_score": 5,
+  "overall_score": 5.0,
+  "feedback": "1. Add cross-team validation: This journey is grounded entirely in interview-2026-03-05-001 (Raj, Payments backend). While the evidence is deep, incorporating perspectives from additional interviews (frontend, SRE, new hires) would strengthen the journey by confirming which pain points are universal vs. team-specific. The batch insight (insight-2026-03-27-004) is referenced in the PRD but not directly cited in the journey.\n2. Include analytics data when available: The journey template supports an analytics_data input, and several friction points (build time, flaky rate, cache hit rate) have quantifiable metrics. Once CI analytics are collected (per the insight's recommended next steps), overlay quantitative funnel data on the journey stages to move from interview-reported numbers to system-verified numbers.\n3. Consider mapping a future-state journey: This journey thoroughly documents the current-state experience. A companion future-state journey showing the experience after PRD-2026-03-27-001 ships would serve as a design target for the implementation team and a baseline for post-launch outcomes tracking.",
+  "created_at": "2026-03-27T14:00:00Z"
+}

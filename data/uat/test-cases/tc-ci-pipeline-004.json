@@ -1,0 +1,13 @@
+{
+  "id": "tc-2026-03-27-004",
+  "title": "Build Cache Reliability — Happy Path: Unchanged Targets Achieve 80% Cache Hit Rate",
+  "prd_id": "prd-2026-03-27-001",
+  "acceptance_criterion": "REQ-003-AC-06",
+  "given": "An engineer runs a CI build for a PR that modifies 2 files in the payments service, while 150 build targets for unchanged dependencies (shared libraries, proto definitions, common utilities) have cached artifacts from the last successful build",
+  "when": "The build system requests cached artifacts from the remote Bazel cache for the 150 unchanged targets",
+  "then": "At least 120 of the 150 requests (80%) return a cache hit, each cache response is delivered in under 500ms, and the build log shows cache hit/miss statistics per target group",
+  "status": "pending",
+  "result_notes": null,
+  "executed_at": null,
+  "created_at": "2026-03-27T15:00:00Z"
+}

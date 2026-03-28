@@ -1,0 +1,13 @@
+{
+  "id": "tc-2026-03-27-005",
+  "title": "Selective Test Execution — Happy Path: Only Affected Tests Run for Scoped Change",
+  "prd_id": "prd-2026-03-27-001",
+  "acceptance_criterion": "REQ-004-AC-08",
+  "given": "An engineer pushes a change that modifies 3 files in the payments service ('PaymentProcessor.java', 'PaymentProcessorTest.java', 'payment-config.yaml'), and the full test suite contains 2,400 tests across 12 services",
+  "when": "CI determines which tests to run by analyzing the dependency graph of the 3 modified files",
+  "then": "Only the 180 tests in the dependency graph of the modified files are executed (not the full 2,400-test suite), the CI run summary displays the selected test set with a breakdown showing '180 of 2,400 tests selected based on dependency analysis of 3 changed files', and the total wall-clock time is under 15 minutes",
+  "status": "pending",
+  "result_notes": null,
+  "executed_at": null,
+  "created_at": "2026-03-27T15:00:00Z"
+}

@@ -1,0 +1,14 @@
+[project]
+name = "pm-assistant-miro-server"
+version = "0.1.0"
+description = "Miro MCP server for PM Assistant — affinity maps, mind maps, journey maps"
+requires-python = ">=3.11"
+dependencies = [
+    "mcp[cli]",
+    "httpx",
+    "python-dotenv",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

@@ -1,0 +1,13 @@
+{
+  "id": "tc-2026-03-27-003",
+  "title": "CI Failure Classification — Happy Path: Failures Labeled by Category in CI Results",
+  "prd_id": "prd-2026-03-27-001",
+  "acceptance_criterion": "REQ-002-AC-04",
+  "given": "An engineer views a failed CI run on PR #4530 where 3 tests failed: 'test_checkout_flow' (caused by the PR's code change), 'test_db_connection_retry' (a known flaky test in quarantine), and 'test_artifact_upload' (failed due to a network timeout to the artifact store)",
+  "when": "The CI results page loads for PR #4530",
+  "then": "The test 'test_checkout_flow' is labeled as 'change-related failure' (red), 'test_db_connection_retry' is labeled as 'known flaky test' (yellow), 'test_artifact_upload' is labeled as 'infrastructure failure' (gray), and the overall PR status reflects only the change-related failure from 'test_checkout_flow'",
+  "status": "pending",
+  "result_notes": null,
+  "executed_at": null,
+  "created_at": "2026-03-27T15:00:00Z"
+}
