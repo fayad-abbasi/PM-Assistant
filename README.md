@@ -22,18 +22,18 @@ Everything is a file. Everything is git-versioned. Everything is linked.
 
 ```
 ┌─────────────────────────────────────────────────────────────────┐
-│                        Claude Code Session                       │
-│                                                                  │
+│                        Claude Code Session                      │
+│                                                                 │
 │  /slash-command ──► Prompt Template ──► Subagent (generation)   │
 │                            │                    │               │
 │                     background_information/   data/             │
 │                     (PM frameworks, books,    (artifacts:       │
 │                      course summaries)         PRDs, insights,  │
-│                                                interviews, OKRs  │
-│  Hooks:                                        roadmap, GTM...   │
+│                                                interviews, OKRs │
+│  Hooks:                                        roadmap, GTM...  │
 │  • Session-start → inject context             all as .md/.json) │
 │  • On-write → auto quality-gate               git-versioned     │
-│                                                                  │
+│                                                                 │
 │  MCP Servers: Jira · Slack · Figma · Miro · Lucid               │
 └─────────────────────────────────────────────────────────────────┘
 ```
