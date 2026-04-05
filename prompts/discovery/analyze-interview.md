@@ -209,6 +209,20 @@ created_at: "{ISO-8601 datetime}"
 
 ---
 
+## Anti-Rationalization Check
+
+Before generating, check yourself against these common shortcuts. If you catch yourself thinking any of these, stop and correct course.
+
+| Rationalization | Why It's Wrong | Do This Instead |
+|----------------|---------------|-----------------|
+| "The interviewee's point is clear — I'll summarize without quoting" | Paraphrased insights lose the emotional weight and specificity that make them persuasive to stakeholders. | Use verbatim quotes. Paraphrase only when the original is genuinely unclear, and flag it as a paraphrase. |
+| "This interview doesn't have strong signals — I'll boost the confidence rating so it seems useful" | Inflated confidence corrupts downstream prioritization. A low-confidence insight is still valuable — it signals where to probe further. | Rate honestly. If evidence is thin, say `low` and explain why. That's more useful than a false `high`. |
+| "The JTBD section feels redundant with pain points — I'll keep it light" | Pain points describe symptoms; JTBD describes the underlying motivation. Skipping JTBD means the insight can't inform solution design. | Write distinct functional, emotional, and social jobs. If they genuinely overlap with pain points, you haven't gone deep enough on the "why." |
+| "There aren't really any contradictions or surprises in this interview" | You probably haven't looked hard enough. Most interviews contain at least one gap between stated and revealed behavior. | Re-read the transcript specifically looking for say/do gaps, workarounds that contradict stated preferences, or unstated assumptions. |
+| "I'll tag this broadly — more tags means easier to find later" | Over-tagging dilutes search relevance. Tags should be precise enough that filtering by them returns a meaningful, focused set. | Use 3-5 tags maximum. Each tag should answer: "Would I search for this specific tag when looking for this insight?" |
+
+---
+
 ## Rules
 
 1. Always ground observations in specific transcript evidence. Never invent or assume details not present.

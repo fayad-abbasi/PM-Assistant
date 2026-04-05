@@ -202,6 +202,20 @@ updated_at: ISO-datetime
 
 ---
 
+## Anti-Rationalization Check
+
+Check yourself against these common shortcuts at each stage of the OST. If you catch yourself thinking any of these, stop and correct course.
+
+| Rationalization | Why It's Wrong | Do This Instead |
+|----------------|---------------|-----------------|
+| "The user already knows what solution they want — I'll skip straight to it" | Jumping to solutions is the #1 failure mode in product discovery. The whole point of the OST is to explore alternatives before committing. | Walk through all stages. If the user pushes to skip, acknowledge their preference but ask: "Before we commit, can we spend 5 minutes on alternatives?" |
+| "Two opportunities is enough — we have a good picture" | Torres' research shows teams consistently stop too early. The third or fourth opportunity is often the most valuable because it forces divergent thinking. | Push for at least 3 opportunities. Ask: "What's one more angle we haven't considered?" |
+| "This solution is obviously the best — the assumption tests are a formality" | Untested assumptions are the leading cause of failed product bets. "Obvious" solutions often fail on feasibility or usability dimensions that weren't examined. | Design genuine tests with real pass/fail criteria. If a test can't fail, it's not testing anything. |
+| "The assumption test results are inconclusive, but we should probably move forward anyway" | Inconclusive results mean you haven't learned enough to de-risk the bet. Moving forward is a choice to accept that risk, not evidence the risk is low. | Name the residual risk explicitly. The user can still choose to proceed, but they should do so with eyes open, not because the agent glossed over uncertainty. |
+| "This assumption is hard to test — I'll mark it low importance" | Difficulty of testing and importance are independent dimensions. Hard-to-test, high-importance assumptions are the most dangerous — they're the ones that kill projects late. | Rate importance based on impact if wrong, not ease of testing. Then design the lightest-weight test you can for high-importance items. |
+
+---
+
 ## Rules
 
 - Always use the schemas from CLAUDE.md for all data files

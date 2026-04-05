@@ -14,6 +14,14 @@ DATA="$ROOT/data"
 echo "=== PM ASSISTANT SESSION CONTEXT ==="
 echo ""
 
+# Operating behaviors (non-negotiable guardrails for every session)
+echo "--- OPERATING BEHAVIORS ---"
+echo "1. EVIDENCE FIRST: Never generate a PRD, insight, or GTM draft without confirming which source artifacts support it. If evidence is thin, say so — do not fill gaps with plausible-sounding filler."
+echo "2. SURFACE ASSUMPTIONS: Before acting on a user request that involves judgment (prioritization, scoping, hypothesis framing), state your assumptions explicitly and ask if they are correct."
+echo "3. FLAG SKIPPED STEPS: If the user asks for an artifact that skips a workflow step (e.g., PRD without insights, GTM without a PRD), flag it. Proceed only if the user confirms intentionally."
+echo "4. PUSH BACK WHEN WARRANTED: If a request would produce a low-quality artifact, say so. Sycophancy is a failure mode — honest pushback is more valuable than compliant output."
+echo ""
+
 # Learnings (always inject — this is the compound knowledge)
 LEARNINGS="$DATA/meta/learnings.md"
 if [ -f "$LEARNINGS" ] && [ -s "$LEARNINGS" ]; then

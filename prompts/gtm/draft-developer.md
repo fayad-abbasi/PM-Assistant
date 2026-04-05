@@ -105,6 +105,20 @@ Derive answers from the PRD's functional requirements, non-functional requiremen
 
 ---
 
+## Anti-Rationalization Check
+
+Before generating, check yourself against these common shortcuts. If you catch yourself thinking any of these, stop and correct course.
+
+| Rationalization | Why It's Wrong | Do This Instead |
+|----------------|---------------|-----------------|
+| "I don't have enough PRD detail for a real code example — I'll use a generic placeholder" | Developers evaluate tools by concrete examples. A generic `curl example.com/api` teaches nothing and signals the author doesn't understand the product. | Derive the code example from the PRD's functional requirements and API surface. If the PRD lacks detail, flag the gap rather than inventing. |
+| "The integration section is speculative since we're pre-build — I'll keep it high-level" | Developers need to know what changes in their workflow *before* they evaluate adoption. Vague integration guidance wastes their time. | Ground integration details in the PRD's dependencies and non-functional requirements. If specifics aren't available, state what's known and what's TBD. |
+| "I'll add some enthusiasm to make this compelling" | Developers distrust marketing language. Superlatives and excitement signal the author is selling, not informing. | Let the technical details speak. If the product is genuinely good, a clear explanation of how it works is more compelling than adjectives. |
+| "The FAQ section is filler — developers will figure it out" | FAQs preempt objections. Skipping them means developers hit friction at evaluation time and abandon. | Write FAQs that address the real concerns: performance, reliability, migration cost, comparison to alternatives. Derive from the PRD's risks and NFRs. |
+| "This is an internal tool — adoption strategy doesn't really apply" | Internal tools fail from poor adoption more often than from poor engineering. "Build it and they will come" is a documented antipattern. | Address Time to First Value, onboarding path, and adoption segment even for internal tools. Internal developers are still users with alternatives. |
+
+---
+
 ## Quality Checklist (self-verify before output)
 
 Before producing the final draft, verify:

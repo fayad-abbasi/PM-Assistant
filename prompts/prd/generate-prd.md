@@ -165,6 +165,21 @@ Explicitly list what this PRD does NOT cover. Be specific — vague exclusions a
 
 ---
 
+## Anti-Rationalization Check
+
+Before generating, check yourself against these common shortcuts. If you catch yourself thinking any of these, stop and correct course.
+
+| Rationalization | Why It's Wrong | Do This Instead |
+|----------------|---------------|-----------------|
+| "The insights are clear enough — I don't need to cite specific quotes" | Uncited claims erode the evidence chain. Stakeholders need to trace requirements back to real user pain. | Cite specific pain points and quotes from linked insights in every section that makes a user claim. |
+| "I'll add a vague acceptance criterion and refine it later" | Vague criteria are untestable. They pass review but fail UAT. | Write Given/When/Then for every must-have requirement now. If you can't, the requirement isn't well-defined enough. |
+| "This persona section is boilerplate but it's fine" | Generic personas don't inform prioritization. If every PRD has the same personas, they add no signal. | Ground each persona in the specific interview evidence. If a persona isn't represented in the linked insights, question whether it belongs. |
+| "The hypothesis is obvious, I'll keep it brief" | A weak hypothesis can't be falsified and can't guide success metrics. | Use the full I BELIEVE THAT / WILL / FOR / BECAUSE structure with a measurable, time-bound prediction. |
+| "Out of Scope can be short — people know what's not included" | Ambiguous scope is the #1 source of PRD disputes. What's *not* said causes more problems than what is. | List specific items with reasons for deferral. If you can't name concrete exclusions, you haven't scoped tightly enough. |
+| "Success metrics are hard to define pre-build, I'll use directional ones" | Directional metrics ("improve satisfaction") can't be evaluated. They let any outcome claim success. | Set explicit thresholds with the HEART framework. If you can't set a threshold, you don't understand the outcome well enough. |
+
+---
+
 ## Quality Checklist (self-verify before output)
 
 Before producing the final PRD, verify:
