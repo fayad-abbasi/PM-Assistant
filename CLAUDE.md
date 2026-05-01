@@ -22,6 +22,7 @@ No web app. No FastAPI. No React. The entire PM workflow runs **inside Claude Co
 | **Data** | `data/` | All PM artifacts as Markdown/JSON files — the source of truth |
 | **Meta** | `data/meta/` | Shared metadata: tag taxonomy, ID counters, tag definitions, learnings |
 | **Background** | `background_information/` | PM frameworks and reference material — ingested via `/ingest`. **Local-only** — not included in the repo. Place your own PM books, course summaries, and framework references here and run `/ingest scan` to integrate them into the workflow. |
+| **Shape Up** | `data/shape-up/` | Shape Up artifacts — `pitches/`, `cycles/`, `hill-charts/`. Used by `/shape-up`. Pitches are an alternative to PRDs; cycles record the bet; hill-chart snapshots are immutable time-series files. |
 
 ### Design Principles
 
@@ -55,6 +56,7 @@ No web app. No FastAPI. No React. The entire PM workflow runs **inside Claude Co
 | `/next` | Prioritized recommendations for what to work on next |
 | `/quality-check` | Post-generation structural + content quality validation |
 | `/refresh` | Re-inject session context on demand (same as session-start hook, mid-session) |
+| `/shape-up` | Shape Up methodology — shape pitches, bet on six-week cycles, map scopes, hill-chart progress, circuit-break or ship |
 
 ## Data Conventions
 
@@ -77,6 +79,8 @@ No web app. No FastAPI. No React. The entire PM workflow runs **inside Claude Co
 - **Test cases**: `pending` | `pass` | `fail` | `blocked`
 - **Outcomes**: `on-track` | `partially-met` | `met` | `missed`
 - **OSTs**: `exploring` | `testing` | `decided` | `implemented`
+- **Pitches** (Shape Up): `shaping` | `pitched` | `bet` | `shipped` | `shelved`
+- **Cycles** (Shape Up): `active` | `shipped` | `partially-shipped` | `circuit-broken`
 
 ## Frontmatter Schemas
 
@@ -169,6 +173,44 @@ Fields: id, title, date, attendees[], action_items[], tags, created_at
 ### Eval Result (`data/evals/*.json`)
 Fields: id, artifact_id, artifact_type, rubric, scores{}, max_score, feedback, created_at
 
+### Pitch (`data/shape-up/pitches/*.md`)
+Shape Up pitch — alternative to a PRD when applying Shape Up methodology. Pitches stay at the right level of abstraction (rough/solved/bounded) and contain only the five ingredients: problem, appetite, solution, rabbit holes, no-gos. Pitches are NOT specs — no user stories, no Given/When/Then, no HEART metrics. Those belong in a PRD.
+```yaml
+id: pitch-{date}-{NNN}
+title: string
+appetite: small-batch | big-batch
+status: shaping | pitched | bet | shipped | shelved
+linked_insights: [insight IDs]   # at least one
+linked_interviews: [interview IDs]
+linked_ost: ost-ID or null
+linked_cycle: cycle-ID or null
+prd_id: prd-ID or null   # rare: only if pitch was followed by a PRD
+tags: [from tags.json — must include 'shape-up' from methodology category]
+created_at: ISO-datetime
+updated_at: ISO-datetime
+```
+
+### Cycle (`data/shape-up/cycles/*.md`)
+Shape Up six-week (or small-batch) cycle. Records the bet — which pitches the team committed to, team configuration, dates, circuit-breaker policy. ID format: `cycle-{YYYY-WW}-{NNN}` (ISO year + week of cycle start).
+```yaml
+id: cycle-{YYYY-WW}-{NNN}
+title: string
+start_date: ISO-date
+end_date: ISO-date
+cool_down_end: ISO-date
+team: string                 # e.g., "1 designer + 2 programmers"
+bets: [pitch IDs]
+status: active | shipped | partially-shipped | circuit-broken
+tags: [from tags.json]
+created_at: ISO-datetime
+updated_at: ISO-datetime
+```
+Body sections: Bets, Team, Kick-off Notes, Scope Map, Hill Snapshots (pointer), Cycle Outcomes.
+
+### Hill Chart Snapshot (`data/shape-up/hill-charts/*.json`)
+Immutable point-in-time snapshot of every scope's position on the hill (uphill = unknowns; downhill = execution). Each snapshot is a separate file. Comparing snapshots over time is the time-lapse view.
+Fields: id, cycle_id, snapshot_at, week_of_cycle, scopes[] (each with name, position 0–100, phase, delta_from_prior, note, flag), sequence_check, time_budget_check, user_summary.
+
 ### Person Page (`data/stakeholder/people/*.md`)
 ```yaml
 id: person-{slug}
@@ -201,6 +243,9 @@ Not frontmatter-based. Append-only file capturing Claude's mistakes and correcti
 12. **Quality-checker**: `/quality-check` validates structure (frontmatter, links, tags, rules) + content quality (rubric scoring). Called automatically by generation commands or standalone.
 13. PRDs should link to an OST when one exists — the OST provides the evidence trail from outcome to solution
 14. Before creating a PRD for a non-trivial initiative, consider building an OST first to explore alternatives and test assumptions
+15. **Shape Up pitches and PRDs are distinct artifact types and can coexist.** Pitches stay at the right level of abstraction (rough/solved/bounded) and have five ingredients only — problem, appetite, solution, rabbit holes, no-gos. PRDs are execution specs (user stories, functional reqs, Given/When/Then, HEART). Don't auto-convert one to the other. From an OST decision, either route is valid — choose `/prd` for spec-style work, `/shape-up` for fixed-time/variable-scope cycles.
+16. **Shape Up circuit breaker is non-negotiable.** Cycles that don't ship by end_date get `status: circuit-broken` — never extend silently. The unfinished work returns to shaping or gets shelved. This discipline is what keeps the methodology working (§5.2 of the Shape Up reference).
+17. **Hill-chart snapshots are immutable.** Each snapshot is a new file in `data/shape-up/hill-charts/`. Never edit a prior snapshot — the time-lapse view depends on the file series being preserved.
 
 ## MCP Servers
 
@@ -234,6 +279,25 @@ Note: MCP servers are placeholders until the actual tool stack is confirmed in t
 /outcomes              → Track post-launch metrics against OKR targets
 /retro                 → Retrospective feeding learnings back to strategy
 ```
+
+### Shape Up Cycle (Alternative Execution Path)
+
+For projects where you want fixed-time/variable-scope discipline instead of a traditional PRD spec:
+
+```
+/discover              → Capture insights as usual
+/ost                   → Optional — explore opportunities and solutions
+/shape-up shape        → Shape a raw idea: appetite, problem, breadboard, rabbit holes, no-gos
+/shape-up pitch        → Generate the formal pitch (5 ingredients only)
+/shape-up bet          → Record the cycle commitment (bet on pitches, set start/end, confirm circuit breaker)
+/shape-up scopes       → After 3–5 days of building, factor work into scopes
+/shape-up hill         → Weekly: capture immutable hill-chart snapshot
+/shape-up ship         → Close out: shipped | partially-shipped | circuit-broken
+/retro                 → Cycle retrospective — examine the shaping if circuit-broken
+/outcomes              → Track post-launch metrics
+```
+
+Pitches and PRDs coexist — `/shape-up` is the right path when you want to bet a fixed appetite on a rough/solved/bounded concept. Use `/prd` when you need an execution spec with user stories, Given/When/Then, and HEART.
 
 ### Day-to-Day Quick Captures
 

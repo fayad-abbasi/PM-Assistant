@@ -175,7 +175,7 @@ Help the user prioritize which assumptions to test first using Torres' risk matr
 |----------|-----------|
 | Adding an interview | "Want me to analyze it now?" |
 | Analyzing an interview | "Want to batch analyze all interviews?" or "Ready to `/ost` to explore opportunities?" |
-| Batch analyzing | "Ready to `/ost` to map opportunities to solutions?" or "Should I `/ux` to map the journey?" |
+| Batch analyzing | "Ready to `/ost` to map opportunities to solutions?" or "Should I `/ux` to map the journey?" or "Want to `/shape-up shape` a specific opportunity into a pitch?" |
 | Importing analytics | "Want to cross-reference with interview insights?" |
 | Listing interviews/insights | "Want to analyze any of these?" or "Ready to `/ost`?" |
 | Testing an assumption | "Record more results?" or "Ready to `/ost decide` on a solution?" |

@@ -105,19 +105,23 @@ For the user's top 2-3 solutions:
 
 ---
 
-## Action 4: Decide and Generate PRD
+## Action 4: Decide and Generate Downstream Artifact
 
 1. Show the tree with test results
 2. Ask: "Which solution do you want to move forward with?"
 3. Capture the rationale: why this one won, which assumptions were validated, what risks remain
 4. Update the OST status to `decided` and record the decision in the artifact
-5. Offer to launch `/prd` with pre-populated context:
+5. Ask the user which downstream path fits this work:
+   - **`/prd`** — execution spec with user stories, functional requirements, Given/When/Then acceptance criteria, HEART metrics. Default for most cases.
+   - **`/shape-up shape`** — Shape Up pitch when the user wants fixed-time/variable-scope discipline (appetite-bound, rough/solved/bounded, no formal spec). Good fit for ambiguous work where the team needs latitude.
+   - **Both paths are valid** — don't default to one. Ask: "Do you want a traditional PRD spec, or a Shape Up pitch with an appetite?"
+6. Launch the chosen path with pre-populated context:
    - Problem statement drawn from the opportunity and supporting insights
-   - Hypothesis drawn from the selected solution and its validated assumptions
+   - Hypothesis (PRD) or problem story (pitch) drawn from the selected solution
    - Linked insights from the opportunity
    - Linked OKR from the outcome
    - Assumption test results as evidence
-6. Update the OST with the resulting PRD ID once created
+7. Update the OST with the resulting PRD ID or pitch ID once created (use `prd_id` or add `pitch_id` to the OST artifact)
 
 ---
 
@@ -235,5 +239,5 @@ Check yourself against these common shortcuts at each stage of the OST. If you c
 |----------|-----------|
 | Creating an OST | "Run your assumption tests, then `/ost resume` to record results" |
 | Recording test results | "Ready to `/ost decide`?" or "Need more tests?" |
-| Deciding on a solution | "Launch `/prd` from this OST?" |
+| Deciding on a solution | "Launch `/prd` for a spec, or `/shape-up shape` for a Shape Up pitch?" |
 | Listing OSTs | "Resume one?" or "Create a new one?" |

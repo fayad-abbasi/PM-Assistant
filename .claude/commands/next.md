@@ -32,6 +32,14 @@ Check the same data quality flags as `/pm-dash`:
 - OST with `status: testing` has pending assumption tests — tests waiting for results
 - OST with `status: testing` where all assumption tests are completed — ready to pick a winner
 
+**Shape Up signals** (only if `data/shape-up/` has artifacts):
+- Pitches in `pitched` status with no `linked_cycle` — waiting for a betting decision
+- Active cycle with no scope map after 5+ days — `/shape-up scopes` overdue
+- Active cycle with no hill snapshot in 7+ days — `/shape-up hill` overdue
+- Active cycle within 5 days of `end_date` — circuit-breaker decision approaching
+- Most recent hill snapshot has any scope flagged `stuck` — surface for attention
+- Cycle past `end_date` still in `active` status — needs `/shape-up ship` to close out
+
 ### 2. Score and Rank
 
 For each issue found, assign a priority score:
@@ -45,6 +53,12 @@ For each issue found, assign a priority score:
 - **Insights without an OST**: 45 points (jumping to PRD without structured exploration)
 - **OST with pending assumption tests**: 75 points (active experiment needs data)
 - **OST with all tests completed**: 85 points (decision bottleneck — winner ready to pick)
+- **Cycle past end_date, not closed out**: 95 points (circuit breaker fired — must be acknowledged, not silently extended)
+- **Hill snapshot shows stuck scope (latest)**: 90 points (active blocker — team needs help)
+- **Cycle within 5 days of end_date**: 80 points (ship-or-circuit-break decision approaching)
+- **Active cycle with no scope map after 5+ days**: 65 points (`/shape-up scopes` overdue)
+- **Active cycle with no hill snapshot in 7+ days**: 60 points (visibility gap — stuck work could be hidden)
+- **Pitch in `pitched` status awaiting bet**: 55 points (decision pending)
 - **Missing journeys/retros/evals**: 20 points each
 
 ### 3. Present Top 3 Recommendations
@@ -79,7 +93,7 @@ NEXT — What needs attention
 Quick wins: `/link-check` (verify data integrity) | `/weekly` (generate status report)
 ```
 
-> **Note**: Items 4–6 are OST-specific recommendations. Include them only when the corresponding condition is detected. The numbered example above is illustrative — actual output shows exactly 3 recommendations, ranked by score.
+> **Note**: Items 4–6 are OST-specific recommendations. Include them only when the corresponding condition is detected. Shape Up recommendations (cycle past end_date, stuck scopes, scope map overdue, hill snapshot overdue, pending bets) follow the same pattern — surface only when the corresponding signal exists. The numbered example above is illustrative — actual output shows exactly 3 recommendations, ranked by score.
 
 ## Rules
 
